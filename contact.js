@@ -1,38 +1,39 @@
 function showData() {
-    let showName = document.getElementById('input-name').value;
-    let showEmail = document.getElementById('input-email').value;
-    let showPhone = document.getElementById('input-phone').value;
-    let showSubject = document.getElementById('input-subject').value;
-    let showMessage = document.getElementById('input-messages').value;
+    let inputName = document.getElementById('input-name').value;
+    let inputEmail = document.getElementById('input-email').value;
+    let inputPhone = document.getElementById('input-phone').value;
+    let inputSubject = document.getElementById('input-subject').value;
+    let inputMessage = document.getElementById('input-messages').value;
    
 
-    console.log(showName);
-    console.log(showEmail);
-    console.log(showPhone);
-    console.log(showSubject);
+    console.log(inputName);
+    console.log(inputEmail);
+    console.log(inputPhone);
+    console.log(inputSubject);
+    console.log(inputMessage);
     
-    if (showName == '') {
-        return alert('Name filled')
+    if (inputName == '') {
+        return alert('Name is required')
     }
-    if (showEmail == '') {
-        return alert('email filled')
+    if (inputEmail == '') {
+        return alert('email is required')
     }
-    if (showPhone == '') {
-        return alert('Phone filled')
+    if (inputPhone == '') {
+        return alert('Phone is required')
     }
-    if (showSubject == '') {
-        return alert('Subject filled')
+    if (inputSubject == '') {
+        return alert('Subject is required')
     }
-    if (showMessage == '') {
-        return alert('Message filled')
+    if (inputMessage == '') {
+        return alert('Message is required')
     }
     
     let emailReceiver = "Brilliantkid87@gmail.com"
 
     let a = document.createElement('a');
-    a.href = ''
+    a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailReceiver}&su=${inputSubject}&body=hallo nama saya ${inputName} ${inputMessage} silahkan hubungi ${inputPhone}`
 
-    a.click
+    a.click()
 }
 
 
